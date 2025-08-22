@@ -2,17 +2,16 @@
 variable "proxmox_api_url" {
   description = "Proxmox API URL"
   type        = string
-  default     = "https://192.168.1.101:8006/api2/json"
-}
+ }
 
-variable "proxmox_username" {
-  description = "Proxmox username"
+variable "proxmox_api_username" {
+  description = "Proxmox API ID"
   type        = string
   sensitive   = true
 }
 
-variable "proxmox_password" {
-  description = "Proxmox password"
+variable "proxmox_api_usertoken" {
+  description = "Proxmox usertoken"
   type        = string
   sensitive   = true
 }
@@ -27,7 +26,7 @@ variable "proxmox_node" {
 variable "template_vm_id" {
   description = "VM ID of the Debian base template to clone from"
   type        = number
-  default     = 9000
+  default     = 9024
 }
 
 # VM configuration
