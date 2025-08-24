@@ -22,12 +22,6 @@ variable "proxmox_node" {
   default     = "pve"
 }
 
-# Template configuration
-variable "template_vm_id" {
-  description = "VM ID of the Debian base template to clone from"
-  type        = number
-  default     = 9024
-}
 
 # VM configuration
 variable "vm_name" {
@@ -36,11 +30,6 @@ variable "vm_name" {
   default     = "debian-vm"
 }
 
-variable "vm_id" {
-  description = "VM ID for the new VM"
-  type        = number
-  default     = 1000
-}
 
 variable "vm_description" {
   description = "Description of the VM"
@@ -89,3 +78,15 @@ variable "vm_tags" {
   type        = list(string)
   default     = ["debian", "terraform", "template"]
 } 
+
+variable "vm_ssh_user" {
+  description = "SSH user"
+  type        = string
+
+}
+
+variable "vm_ssh_password" {
+  description = "SSH password"
+  type        = string
+}
+
